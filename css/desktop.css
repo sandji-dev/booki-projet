@@ -1,0 +1,441 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+    --card-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(var(--card-shadow));
+    display: flex; /* Ajouté pour la cohérence */
+    flex-direction: column;
+    height: 100%;
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+.sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;
+  }
+ 
+ 
+
+/* Header */
+/* Header et le nav*/
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ }
+ /* Liens de navigation */
+ .nav-links {
+    display: flex;
+    gap: 30px;
+ }
+ .nav-links a {
+    color: #000;
+    font-weight: 500;
+    padding: 10px;
+ }
+ .nav-links a:hover {
+    color: #0065fc;
+ }
+ /* logo*/
+ 
+ 
+ .logo {
+    height: 40px;
+ }
+ 
+
+/* Hero Section */
+.hero {
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    margin-bottom: 8px;
+}
+
+.hero p {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+/* Search Bar & Filters */
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 350px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+/* containeur de l îcone localisation*/
+.icon-container {
+    padding: 12px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* icone de localisation*/
+.icon-container i {
+    color: #333;
+    font-size: 18px;
+}
+/* champs de saisir*/
+.search-input {
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+
+
+
+}
+
+
+/* bouton Rechercher*/
+
+.search-button {
+    background-color: #0065fc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+.search-button:hover {
+    background-color: #004bb5;
+}
+/* la loupe*/
+.search-button i {
+    display: none;
+}
+/* le placeholder*/
+
+
+.search-input::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Filters */
+/* filters */
+
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: black; /* ← important */
+}
+
+
+.filter-btn i {
+    color: #0065fc;
+    font-size: 14px;
+}
+
+
+.filter-btn:hover {
+    background-color: #deebff; /* fond bleu clair */
+    color: black; /* ← on garde le texte noir */
+}
+.filter-btn span {
+    white-space: nowrap;
+}
+
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.info-bar i {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+}
+
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    gap: 40px; /* Utilise gap pour l'espacement */
+    margin-bottom: 35px;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    flex: 2; /* Prend 2/3 de l'espace */
+}
+
+.hebergements .title-left {
+    margin-bottom: 30px;
+}
+
+.hebergements-cards {
+    display: flex; /* ✅ CHANGEMENT: Grid -> Flex */
+    flex-wrap: wrap; /* ✅ Permet aux cartes de passer à la ligne */
+    gap: 30px; /* Gère l'espacement entre les cartes */
+}
+
+.hebergements-cards a {
+    /* Calcule la largeur pour 3 colonnes en tenant compte du 'gap' */
+    width: calc((100% - 60px) / 3);
+}
+
+.hebergements-cards .card img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.hebergements-cards .card-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permet au contenu de s'étirer */
+}
+
+/* ... (Le reste des styles des cartes reste similaire) ... */
+.hebergements-cards .card-title {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.afficher-plus {
+    color: black;
+    margin-top: 15px;
+    display: block;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+}   
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+    float: right; /* Colonne de droite */
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.populaires-cards .card {
+    display: table; /* Utilise le modèle de table pour l'alignement interne */
+    width: 100%;
+    margin-top: 33px;
+}
+
+.populaires-cards img, .populaires-cards .card-content {
+    display: table-cell; /* Les enfants se comportent comme des cellules de tableau */
+    vertical-align: top;
+}
+
+.populaires-cards img {
+    width: 33%;
+    min-width: 100px; /* Empêche l'image d'être trop écrasée */
+    height: 144px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+}
+
+/* Section Activités */
+.activites {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.activites .section-title {
+    margin-bottom: 30px;
+}
+
+.activites-cards {
+    display: flex; /* ✅ CHANGEMENT: Grid -> Flex */
+    gap: 30px; /* Gère l'espacement */
+}
+
+.activites-cards .card-link {
+    /* Calcule la largeur pour 4 colonnes */
+    width: calc((100% - 90px) / 4);
+}
+
+.activites-cards .card img {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+}
+
+.activites-cards .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* ... (Le footer et les media queries resteraient très similaires, 
+   en s'assurant que les flex-direction changent correctement pour le responsive) ... */
+/* Footer */
+footer {
+    display: flex;
+    background-color: var(--main-bg-color);
+    padding: 30px;
+    margin-top: 35px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    font-size: 16px;
+    color: black;
+}
+
+.footer-column a:hover {
+    color: var(--main-color);
+}
