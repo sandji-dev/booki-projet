@@ -97,7 +97,7 @@
     }
 
     .hebergements-and-populaires section.hebergements {
-        background-color: white; /* No gray background */
+        background-color: white;
     }
 
     /* Populaires */
@@ -128,7 +128,7 @@
     }
 
     .hebergements-cards a {
-        width: 100%; /* Full width */
+        width: 100%;
     }
     
     /* Activités */
@@ -146,7 +146,7 @@
     }
     
     .activites-cards .card img {
-        height: 150px; /* Smaller image height */
+        height: 150px; 
     }
 
     /* Footer */

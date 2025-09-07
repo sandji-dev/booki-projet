@@ -3,14 +3,14 @@
     /* filters*/
     .filters {
         display: flex;
-        flex-wrap: wrap; /* Essentiel pour que les boutons passent à la ligne */
+        flex-wrap: wrap; 
         align-items: center; /* Aligne verticalement les boutons sur leur ligne */
-        gap: 20px; /* Gère l'espacement entre les boutons */
+        gap: 20px; 
     }
     
     .filters h3 {
         flex-basis: 100%; /* Force le titre à prendre toute la largeur */
-        margin: 0 0 10px 0; /* Supprime les marges par défaut et en ajoute une en bas */
+        margin: 0 0 10px 0; /* pour supprimer les marges par défaut et en ajoute une en bas */
     }
 
     /* --- 1. MISE EN PAGE PRINCIPALE : VERTICALE --- */
@@ -64,7 +64,7 @@
     }
 
     .populaires-cards .card img {
-        width: 40%; /* L'image prend 40% de la carte */
+        width: 40%;
         height: auto; /* La hauteur s'adapte pour ne pas déformer l'image */
         object-fit: cover;
         
@@ -85,8 +85,7 @@
     /* --- ACTIVITÉS : LES 4 CARTES RESTENT ALIGNÉES --- */
     .activites-cards {
     display: flex;
-    gap: 20px; /* On peut réduire légèrement l'espacement pour la tablette */
-    /* On ne met PAS de 'flex-wrap: wrap;' pour forcer les cartes à rester sur une seule ligne */
+    gap: 20px; 
     }
 
     .activites-cards .card-link {

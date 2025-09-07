@@ -279,8 +279,8 @@ header nav {
 }
 
 .hebergements-cards {
-    display: flex; /* ✅ CHANGEMENT: Grid -> Flex */
-    flex-wrap: wrap; /* ✅ Permet aux cartes de passer à la ligne */
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
     gap: 30px; /* Gère l'espacement entre les cartes */
 }
 
@@ -303,7 +303,6 @@ header nav {
     flex-grow: 1; /* Permet au contenu de s'étirer */
 }
 
-/* ... (Le reste des styles des cartes reste similaire) ... */
 .hebergements-cards .card-title {
     margin-top: 8px;
     margin-bottom: 4px;
@@ -379,7 +378,7 @@ header nav {
 }
 
 .activites-cards {
-    display: flex; /* ✅ CHANGEMENT: Grid -> Flex */
+    display: flex;
     gap: 30px; /* Gère l'espacement */
 }
 
@@ -400,8 +399,7 @@ header nav {
     justify-content: center;
 }
 
-/* ... (Le footer et les media queries resteraient très similaires, 
-   en s'assurant que les flex-direction changent correctement pour le responsive) ... */
+
 /* Footer */
 footer {
     display: flex;
