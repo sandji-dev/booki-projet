@@ -79,10 +79,18 @@
         width: 60%; /* Le contenu prend le reste de la place */
         padding: 10px 15px;
         justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+    .populaires-cards .card-title {
+        /* Garde cette propriété pour la gestion des mots longs */
+        overflow-wrap: break-word;
     }
     
     
     /* --- ACTIVITÉS : LES 4 CARTES RESTENT ALIGNÉES --- */
+    
     .activites-cards {
     display: flex;
     gap: 20px; 

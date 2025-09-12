@@ -71,9 +71,9 @@ a {
     padding: 0; margin: -1px;
     overflow: hidden; clip: rect(0, 0, 0, 0);
     white-space: nowrap; border: 0;
-  }
- 
- 
+}
+
+
 
 /* Header */
 /* Header et le nav*/
@@ -82,27 +82,41 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
- }
+}
  /* Liens de navigation */
- .nav-links {
+.nav-links {
     display: flex;
     gap: 30px;
- }
- .nav-links a {
+}
+.nav-links a {
     color: #000;
     font-weight: 500;
     padding: 10px;
- }
- .nav-links a:hover {
+}
+.nav-links a:hover {
     color: #0065fc;
- }
- /* logo*/
- 
- 
- .logo {
+}
+/* Style par défaut pour les liens de navigation */
+header nav a {
+    padding-top: 15px; /* Crée de l'espace au-dessus du texte */
+    margin-top: -15px;  /* Compense le padding pour ne pas décaler le header */
+    border-top: 2px solid transparent; /* Bordure invisible par défaut */
+    transition: all 0.2s ease-in-out; /* Pour un effet de couleur fluide */
+}
+
+/* Style au survol */
+header nav a:hover {
+    color: var(--main-color); /* Change la couleur du texte */
+    border-top-color: var(--main-color); /* Révèle la bordure en la colorant */
+}
+
+/* logo*/
+
+
+.logo {
     height: 40px;
- }
- 
+}
+
 
 /* Hero Section */
 .hero {
