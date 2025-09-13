@@ -20,49 +20,91 @@
         flex-direction: column;
     }
     
+    /* IMPORTANT: Override des règles desktop pour les liens nav */
     header nav a {
         padding: 20px 0;
-        border-top: none;
+        border-top: none !important; /* Supprime la bordure top du desktop */
     }
     
+    /* IMPORTANT: Override du hover desktop */
     header nav a:hover {
-        border-bottom: 2px solid var(--main-color);
-    
+        border-top: none !important; /* Supprime border-top-color du desktop */
+        border-top-color: transparent !important; /* Force transparent */
     }
     
     /* Nav container */
-header .nav-links {
-    display: flex;
-    width: 100%;
-    position: relative;
-}
+    header .nav-links {
+        display: flex;
+        width: 100%;
+        position: relative;
+        margin: 0; /* Supprime les marges du conteneur */
+        padding: 0; /* Supprime le padding du conteneur */
+        gap: 0; /* Supprime l'écart entre les liens */
+        justify-content: center; /* Centre les liens */
+    }
 
-/* La ligne grise continue sous toute la nav */
-header .nav-links::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--main-bg-color); /* gris */
-}
+    /* La ligne grise continue sous toute la nav */
+    header .nav-links::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--main-bg-color);
+    }
 
-/* Liens */
-header .nav-links a {
-    flex: 1;
-    text-align: center;
-    padding-bottom: 15px;
+    /* Liens - OVERRIDE complet des règles desktop */
+    header .nav-links a {
+        flex: 1;
+        text-align: center;
+        padding-bottom: 15px;
+        
+        /* Supprime TOUTES les bordures desktop */
+        border: none !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        
+        /* Seule bordure autorisée : bottom */
+        border-bottom: 3px solid transparent !important;
+        
+        position: relative;
+        z-index: 1;
+        
+        /* Supprime les effets ::before du desktop */
+        background: none !important;
+    }
 
-    border-bottom: 3px solid transparent; /* Invisible par défaut */
-    position: relative;
-    z-index: 1; /*Passe au-dessus de la ligne grise */
-}
+    /* Supprime complètement le ::before du desktop */
+    header .nav-links a::before {
+        display: none !important;
+        content: none !important;
+        background: none !important;
+    }
 
-/* Au survol, la partie sous le lien devient bleue */
-header .nav-links a:hover {
-    border-bottom-color: var(--main-color);
-}
+    /* Au survol - OVERRIDE complet du desktop */
+    header .nav-links a:hover {
+        color: var(--main-color);
+        
+        /* Supprime toutes les bordures sauf bottom */
+        border-top: none !important;
+        border-top-color: transparent !important;
+        border-left: none !important;
+        border-right: none !important;
+        
+        /* Seule bordure autorisée */
+        border-bottom-color: var(--main-color) !important;
+        
+        /* Supprime les effets ::before */
+        background: none !important;
+    }
+
+    /* Supprime le ::before au hover aussi */
+    header .nav-links a:hover::before {
+        display: none !important;
+        background: transparent !important;
+    }
 
     /* Hero */
 

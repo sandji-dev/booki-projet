@@ -77,37 +77,51 @@ a {
 
 /* Header */
 /* Header et le nav*/
+header {
+    margin: 0;
+    padding: 0;
+}
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
 }
  /* Liens de navigation */
 .nav-links {
     display: flex;
     gap: 30px;
 }
+
+/* Ce sélecteur cible UNIQUEMENT les liens dans .nav-links (Hébergements, Activités) */
 .nav-links a {
+    display: flex;
+    align-items: center; /* Centre le texte verticalement dans la zone du lien */
     color: #000;
     font-weight: 500;
-    padding: 10px;
-}
-.nav-links a:hover {
-    color: #0065fc;
-}
-/* Style par défaut pour les liens de navigation */
-header nav a {
-    padding-top: 15px; /* Crée de l'espace au-dessus du texte */
-    margin-top: -15px;  /* Compense le padding pour ne pas décaler le header */
-    border-top: 2px solid transparent; /* Bordure invisible par défaut */
-    transition: all 0.2s ease-in-out; /* Pour un effet de couleur fluide */
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    padding: 20px 10px; /*du padding pour que le hover soit agréable */
 }
 
-/* Style au survol */
-header nav a:hover {
-    color: var(--main-color); /* Change la couleur du texte */
-    border-top-color: var(--main-color); /* Révèle la bordure en la colorant */
+
+.nav-links a:hover {
+    color: #0065fc;
+    border-top-color: #0065fc; /* La bordure devient visible au survol */
+}
+/* Ligne grise par défaut collée en haut */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0; /* tout en haut */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent; /* invisible par défaut */
+}
+/* Au survol → la ligne devient bleue */
+.nav-links a:hover::before {
+    background: #0065fc;
 }
 
 /* logo*/
