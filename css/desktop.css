@@ -369,7 +369,7 @@ header nav a:hover {
 .populaires-cards img {
     width: 33%;
     min-width: 100px; /* Empêche l'image d'être trop écrasée */
-    height: 144px;
+    height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0;

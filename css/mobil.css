@@ -105,9 +105,12 @@ header .nav-links a:hover {
     }
 
     .filter-btn {
-        flex: 1 1 calc(40% - 5px); /* Two columns, responsive */
-        font-size: 14px;
+        width: calc(50% - 10px); /* 2 par ligne avec un petit espace */
+        font-size: 12px;
         padding: 8px 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     .filter-btn i {
@@ -149,6 +152,9 @@ header .nav-links a:hover {
     
     .populaires-cards .card-content {
         padding: 10px;
+    }
+    .populaires-cards img {
+        height: 100%;
     }
 
     /* Hebergements */
