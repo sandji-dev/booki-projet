@@ -101,7 +101,7 @@ header nav {
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     position: relative;
-    padding: 20px 10px; /*du padding pour que le hover soit agréable */
+    padding: 20px 15px; /*du padding pour que le hover soit agréable */
 }
 
 

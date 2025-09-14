@@ -9,7 +9,9 @@
     }
 
     /* Header */
+
     header {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
@@ -18,32 +20,55 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
     }
     
-    /* IMPORTANT: Override des règles desktop pour les liens nav */
+    /* Override des règles desktop pour les liens nav */
+
     header nav a {
         padding: 20px 0;
         border-top: none !important; /* Supprime la bordure top du desktop */
     }
+
+    /* Logo - Parfaitement centré */
+    header nav > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        border: none !important;
+        margin: 0;
+    }
+
+    .logo {
+        height: 40px;
+        display: block;
+    }
     
-    /* IMPORTANT: Override du hover desktop */
+    /*  Override du hover desktop */
+
     header nav a:hover {
         border-top: none !important; /* Supprime border-top-color du desktop */
         border-top-color: transparent !important; /* Force transparent */
     }
     
-    /* Nav container */
+    /* Nav container - parfaitement aligné avec le logo */
+
     header .nav-links {
         display: flex;
         width: 100%;
         position: relative;
-        margin: 0; /* Supprime les marges du conteneur */
-        padding: 0; /* Supprime le padding du conteneur */
-        gap: 0; /* Supprime l'écart entre les liens */
+        margin: 0; /* je Supprime les marges du conteneur */
+        padding: 0; /* je Supprime le padding du conteneur */
+        gap: 0; /* je Supprime l'écart entre les liens */
         justify-content: center; /* Centre les liens */
     }
 
     /* La ligne grise continue sous toute la nav */
+
     header .nav-links::after {
         content: '';
         position: absolute;
@@ -55,10 +80,12 @@
     }
 
     /* Liens - OVERRIDE complet des règles desktop */
+
     header .nav-links a {
         flex: 1;
         text-align: center;
-        padding-bottom: 15px;
+        padding: 15px 0;
+        margin: 0;
         
         /* Supprime TOUTES les bordures desktop */
         border: none !important;
@@ -72,11 +99,16 @@
         position: relative;
         z-index: 1;
         
-        /* Supprime les effets ::before du desktop */
+        /* je Supprime les effets ::before du desktop */
         background: none !important;
+        /* Assure l'alignement parfait */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
     }
 
-    /* Supprime complètement le ::before du desktop */
+    /* je Supprime complètement le ::before du desktop */
     header .nav-links a::before {
         display: none !important;
         content: none !important;
@@ -87,7 +119,7 @@
     header .nav-links a:hover {
         color: var(--main-color);
         
-        /* Supprime toutes les bordures sauf bottom */
+        /* je Supprime toutes les bordures sauf bottom */
         border-top: none !important;
         border-top-color: transparent !important;
         border-left: none !important;
@@ -96,11 +128,11 @@
         /* Seule bordure autorisée */
         border-bottom-color: var(--main-color) !important;
         
-        /* Supprime les effets ::before */
+        /* je Supprime les effets ::before */
         background: none !important;
     }
 
-    /* Supprime le ::before au hover aussi */
+    /*  je Supprime le ::before au hover aussi */
     header .nav-links a:hover::before {
         display: none !important;
         background: transparent !important;
